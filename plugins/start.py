@@ -112,14 +112,14 @@ async def start_command(client: Client, message: Message):
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     message_text = message.text
-    argumen = message_text.replace("/start ", "https://t.me/FileLinkerBot?start=")
-    argument = argumen.replace("/start", "https://t.me/FileLinkerBot?start")
+    argumen = message_text.replace("/start ", "https://t.me/watashiemilia_bot?start=")
+    argument = argumen.replace("/start", "https://t.me/watashiemilia_bot?start")
     cobalagi = f"[Coba lagi]({argument})"
     buttons = [
         [
             InlineKeyboardButton(
                 "Join Channel",
-                url = "https://t.me/SpreadNetworks") # client.invitelink)
+                url = "https://t.me/guidegenshinimpac") # client.invitelink)
         ]
     ]
     try:
@@ -127,7 +127,7 @@ async def not_joined(client: Client, message: Message):
             [
                 InlineKeyboardButton(
                     text = 'Coba Lagi',
-                    url = f"https://t.me/{client.username}?start={message.command[1]}"
+                    url = f"https://t.me/watashiemilia_bot?start={message.command[1]}"
                 )
             ]
         )
